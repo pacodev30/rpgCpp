@@ -17,7 +17,7 @@ int main()
 
     m.displayGamers();
     m.findGamer("Hulk")->attack(m.findGamer("Stella"));
-    m.findGamer("Esteban")->attack(m.findGamer("Hulk"), 4);
+    m.findGamer("Esteban")->attack(m.findGamer("Hulk"), 5);
 
     m.testIsAlive();
 
