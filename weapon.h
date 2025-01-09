@@ -4,7 +4,7 @@
 class Weapon
 {
 public:
-    Weapon(const std::string& name, unsigned int weaponDamage);
+    Weapon(const std::string& name, const unsigned int weaponDamage);
 
     std::string getName() const;
     unsigned int getWeaponDamage() const;

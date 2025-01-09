@@ -1,20 +1,25 @@
 #include "Character.h"
+#include "character.h"
 #include "weapon.h"
 #include <iostream>
-unsigned int Character::_characterCounter = 0;
 
 Character::Character(const std::string& name, const Weapon& weapon)
     : _name(name), _hp(100), _weapon(weapon)
-{
-    _characterCounter++;
-}
+{ }
 
 Character::~Character()
-{  }
+{
+    std::cout << "<- Destruct " << _name << std::endl;
+}
 
 std::string Character::getName() const
 {
     return _name;
+}
+
+int Character::getHp() const
+{
+    return _hp;
 }
 
 bool Character::isAlive() const
@@ -22,7 +27,7 @@ bool Character::isAlive() const
     return _hp > 0;
 }
 
-void Character::getDamage(int damage)
+void Character::takeDamage(int damage)
 {
     if(damage < _hp)
         _hp -= damage;
@@ -30,20 +35,15 @@ void Character::getDamage(int damage)
         _hp =  0;
 }
 
-void Character::attack(Character* target, int numberOfAttack)
+void Character::attack(Character *target, int numberOfAttack)
 {
     for(int i = 0; i < numberOfAttack; i++)
     {
         if (target->isAlive())
         {
-            target->getDamage(_weapon.getWeaponDamage());
+            target->takeDamage(_weapon.getWeaponDamage());
             std::cout << "-> " << _name << " attack " << target->getName() << std::endl;
-            target->displayStatus();
+            std::cout << target->_name + "(" << target->_hp << ")" << std::endl;
         }
     }
-}
-
-int Character::getCharacterCounter()
-{
-    return _characterCounter;
 }

@@ -14,11 +14,10 @@ Game::~Game()
     std::cout << "---" << std::endl;
     for (int i = 0; i < _arrayCapacity; i++)
     {
-        std::cout << "Destruct " << _gamers[i]->getName() << std::endl;
         delete _gamers[i];
         _gamers[i] = nullptr;
     }
-    delete[] _gamers; // Test if deleted ???
+    delete[] _gamers;
 }
 
 void Game::displayGamers() const
@@ -53,9 +52,9 @@ void Game::testIsAlive()
         if(!_gamers[i]->isAlive())
         {
             _endGame = true;
+            std::cout << "A character is dead :(" << std::endl;
         }
+        if(!_endGame)
+            std::cout << "All characters are alive :)" << std::endl;
     }
-    _endGame ?
-        std::cout << "A character is dead :(" << std::endl :
-        std::cout << "All characters are alive :)" << std::endl ;
 }

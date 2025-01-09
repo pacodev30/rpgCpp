@@ -10,7 +10,8 @@ add_executable(rpgCpp main.cpp
     character.h character.cpp
     mage.h mage.cpp
     warrior.h warrior.cpp
-    game.h game.cpp)
+    game.h game.cpp
+    ManagerGame.h ManagerGame.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS rpgCpp

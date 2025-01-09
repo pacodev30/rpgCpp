@@ -7,17 +7,17 @@ public:
     Character(const std::string& name, const Weapon& weapon);
     virtual ~Character();
 
-    virtual std::string getName() const;
-    virtual bool isAlive() const;
+    std::string getName() const;
+    int getHp() const;
+
+    bool isAlive() const;
     virtual void displayStatus() const = 0;
 
-    virtual void getDamage(int damage);
-    virtual void attack(Character* target, int numberOfAttack);
-    static int getCharacterCounter();
+    void takeDamage(int damage);
+    virtual void attack(Character *target, int numberOfAttack = 1);
 
 protected:
     std::string _name;
     unsigned int _hp;
-    Weapon _weapon;
-    static unsigned int _characterCounter;
+    Weapon _weapon;  
 };
