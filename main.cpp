@@ -1,14 +1,14 @@
 #include "ManagerGame.h"
-#include "weapon.h"
+#include "Weapon.h"
 
 int main()
 {
     ManagerGame m;
 
     // INIT WEAPONS
-    Weapon hammer("Hammer", 40);
-    Weapon saber("Saber", 30);
-    Weapon fireBall("Fireball", 20);
+    Weapon hammer(WeaponName::HAMMER, 40);
+    Weapon saber(WeaponName::SABER, 30);
+    Weapon fireBall(WeaponName::FIREBALL, 20);
 
     // GAME
     m.addWarrior("Esteban", saber);
@@ -53,5 +53,5 @@ Hulk is dead :(
 <- Destruct Hulk
 <- Destruct Stella
 
-Le processus s'est terminé avec le code : 0.
+Le processus s'est terminé avec le code : 0.
 */

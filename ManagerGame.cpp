@@ -1,7 +1,7 @@
 #include "ManagerGame.h"
-#include "character.h"
-#include "warrior.h"
-#include "mage.h"
+#include "Character.h"
+#include "Warrior.h"
+#include "Mage.h"
 #include <iostream>
 
 ManagerGame::ManagerGame()
@@ -33,14 +33,14 @@ void ManagerGame::displayGamers() const
 void ManagerGame::addWarrior(std::string name, Weapon& weapon)
 {
     Warrior* w = new Warrior(name, weapon);
-    _gamers.push_back(w);
+    _gamers.emplace_back(w);
     std::cout << "Welcome to " << w->getName() << ", a valiant warrior :)" << std::endl;
 }
 
 void ManagerGame::addMage(std::string name, Weapon &weapon, int mana)
 {
     Mage* m= new Mage(name, weapon, mana);
-    _gamers.push_back(m);
+    _gamers.emplace_back(m);
     std::cout << "Welcome to " << m->getName() << " a wise mage ;)" << std::endl;
 }
 

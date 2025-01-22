@@ -1,4 +1,4 @@
-#include "mage.h"
+#include "Mage.h"
 #include <iostream>
 
 Mage::Mage(const std::string& name, const Weapon& weapon, unsigned int mana)

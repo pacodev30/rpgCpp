@@ -1,15 +1,25 @@
 #pragma once
 #include <string>
 
+
+enum WeaponName
+{
+    SABER,
+    HAMMER,
+    FIREBALL,
+    KNIFE
+};
+
 class Weapon
 {
 public:
-    Weapon(const std::string& name, const unsigned int weaponDamage);
+    Weapon(const WeaponName& name, const unsigned int weaponDamage);
 
     std::string getName() const;
     unsigned int getWeaponDamage() const;
 
 private:
-    std::string _name;
+    WeaponName _name;
     unsigned int _weaponDamage;
 };
+

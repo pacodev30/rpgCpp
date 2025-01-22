@@ -6,11 +6,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(rpgCpp main.cpp
-    weapon.h weapon.cpp
-    character.h character.cpp
-    mage.h mage.cpp
-    warrior.h warrior.cpp
-    game.h game.cpp
+    Weapon.h Weapon.cpp
+    Character.h Character.cpp
+    Mage.h Mage.cpp
+    Warrior.h Warrior.cpp
+
     ManagerGame.h ManagerGame.cpp)
 
 include(GNUInstallDirs)

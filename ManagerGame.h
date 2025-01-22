@@ -1,6 +1,6 @@
 #pragma once
-#include "character.h"
-#include "weapon.h"
+#include "Character.h"
+#include "Weapon.h"
 #include <vector>
 
 class ManagerGame

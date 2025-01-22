@@ -1,6 +1,6 @@
 #include "Character.h"
-#include "character.h"
-#include "weapon.h"
+#include "Character.h"
+#include "Weapon.h"
 #include <iostream>
 
 Character::Character(const std::string& name, const Weapon& weapon)
